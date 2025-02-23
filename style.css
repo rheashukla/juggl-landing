@@ -64,8 +64,8 @@ nav {
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    margin-top: 40px;
-    gap: 1rem;
+    margin-top: 30px;
+    gap: 0.5rem;
 }
 
 .text-section {
