@@ -136,10 +136,11 @@ h2 .highlight {
 .subtitle {
     font-size: 1.5rem;
     font-family: 'Roca Bold', Georgia, serif;
-    text-align: center;
-    display: block;
-    width: 100%;
-    margin: 0 auto 12px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .description {
