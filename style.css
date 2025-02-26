@@ -137,7 +137,9 @@ h2 .highlight {
     font-size: 1.5rem;
     font-family: 'Roca Bold', Georgia, serif;
     text-align: center;
-    margin-bottom: 12px;
+    display: block;
+    width: 100%;
+    margin: 0 auto 12px auto;
 }
 
 .description {
