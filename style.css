@@ -24,7 +24,7 @@ nav {
     display: flex;
     width: 90rem;
     height: 5.375rem;
-    padding: 0rem 3rem;
+    padding: 3rem 3rem;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
