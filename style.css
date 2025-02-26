@@ -138,8 +138,9 @@ h2 .highlight {
     font-family: 'Roca Bold', Georgia, serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;    
 }
+
 
 .description {
     max-width: 750px;
