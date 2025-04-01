@@ -27,33 +27,14 @@
       overflow-x: hidden;
     }
 
-    .background-gif, .background-gif-mobile {
+    .background-image {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       z-index: -2;
-      display: none;
-    }
-
-    @media (min-width: 800px) {
-      .background-gif {
-        display: block;
-      }
-      .background-gif-mobile {
-        display: none;
-      }
-    }
-
-    @media (max-width: 799px) {
-      .background-gif {
-        display: none;
-      }
-      .background-gif-mobile {
-        display: block;
-      }
     }
 
     .foreground-image {
@@ -166,9 +147,8 @@
 </head>
 
 <body>
-  <!-- Background GIFs -->
-  <img src="background.gif" alt="Background" class="background-gif" />
-  <img src="background_mobile.gif" alt="Background Mobile" class="background-gif-mobile" />
+  <!-- Background Image -->
+  <img src="background.png" alt="Background" class="background-image" />
   
   <!-- Top Nav Bar -->
   <nav>
@@ -180,7 +160,7 @@
     </div>
     <a href="https://forms.gle/b6KvJgP85BKoRMAT6" class="signup-button" target="_blank" rel="noopener noreferrer">Sign Up</a>
   </nav>
-  
+
   <!-- Masthead -->
   <header>
     <h1>Burnout shouldn’t be the cost of ambition.</h1>
