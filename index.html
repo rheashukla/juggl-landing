@@ -1,83 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juggl - Reclaim Time & Mental Space</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juggl – Create Time & Mental Space</title>
 
-    <!-- Google Fonts for Nunito Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap" rel="stylesheet">
-    
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    @font-face {
+      font-family: 'Roca';
+      src: url('Roca-Regular.woff') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Onest', sans-serif;
+      background-color: #EEF1F1;
+      color: #585B5B;
+      overflow-x: hidden;
+    }
+
+    .background-gif, .background-gif-mobile {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      .background-gif {
+        display: block;
+      }
+      .background-gif-mobile {
+        display: none;
+      }
+    }
+
+    @media (max-width: 799px) {
+      .background-gif {
+        display: none;
+      }
+      .background-gif-mobile {
+        display: block;
+      }
+    }
+
+    .foreground-image {
+      position: relative;
+      display: block;
+      margin: -3rem auto 0;
+      max-width: 1008px;
+      max-height: 588px;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about-link {
+      text-decoration: none;
+      color: #9FA4A3;
+      font-family: 'Roca', sans-serif;
+      font-weight: normal;
+      font-size: 1rem;
+    }
+
+    .signup-button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 3rem;
+      background: #277DC6;
+      color: white;
+      font-family: 'Roca', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.04rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .signup-button:hover {
+      background-color: #19598F;
+    }
+
+    .signup-button:focus {
+      outline: none;
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem 2rem 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-family: 'Roca', sans-serif;
+      font-size: 2.2rem;
+      font-weight: normal;
+      color: #1B1C1B;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 60rem;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      line-height: 150%;
+      color: #585B5B;
+    }
+
+    .cta-button {
+      font-family: 'Roca', sans-serif;
+      background-color: #277DC6;
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 3rem;
+      font-size: 1rem;
+      font-weight: normal;
+      letter-spacing: 0.04rem;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .cta-button:hover {
+      background-color: #19598F;
+    }
+
+    footer {
+      background-color: rgba(197, 204, 202, 0.5);
+      text-align: center;
+      font-size: 0.875rem;
+      color: #383A3A;
+      padding: 2rem 1rem;
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      z-index: 1;
+    }
+  </style>
 </head>
+
 <body>
-    
-    <!-- Sticky Navbar -->
-    <nav id="navbar">
-        <img src="assets/logo.svg" alt="Juggle Logo" class="logo">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTINd9YM1v7rFiWcI5gbJWn5Z4T918yiwGV5bgTyvdeqjoJQ/viewform?usp=sf_link" target="_blank" class="cta-button">Get Early Access</a>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="text-section">
-                <h1>Reclaim Time <span class="highlight">& Mental Space.</span></h1>
-                <p>
-                    <strong>Using AI-powered insights, automation, and real-time nudges,</strong> 
-                    Juggle reveals how your schedule impacts focus, energy, and mental well-being, 
-                    so you can <strong>prevent burnout</strong> and work smarter, with less effort.
-                </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTINd9YM1v7rFiWcI5gbJWn5Z4T918yiwGV5bgTyvdeqjoJQ/viewform?usp=sf_link" target="_blank" class="hero-btn">Get Early Access</a>
-            </div>
-            <div class="gif-section">
-                <img src="assets/herogif.gif" alt="Product GIF">
-            </div>
-        </div>
-    </section>
-
-    <!-- TEAM SECTION -->
-    <section class="team">
-        <h2>We Understand <span class="highlight">Burnout.</span></h2>
-        <div class = "subtitle">
-        <p>We’ve felt it, studied it, and watched it take down the best.</p>
+  <!-- Background GIFs -->
+  <img src="background.gif" alt="Background" class="background-gif" />
+  <img src="background_mobile.gif" alt="Background Mobile" class="background-gif-mobile" />
+  
+  <!-- Top Nav Bar -->
+  <nav>
+    <div class="nav-left">
+     <a href="index.html">
+     <img src="updatedlogo.png" alt="Juggl Logo" style="height: 32px;" />
+    </a>
+    <a href="about.html" class="about-link">About</a>
     </div>
-        <p class="description">
-            So we did what any group of over-caffeinated minds would do: <strong>we built something better.</strong> 
-            We’re a team of health tech experts, product designers, data scientists, and AI engineers from 
-            Cornell who have come together to prevent burnout.
-        </p>
+    <a href="https://forms.gle/b6KvJgP85BKoRMAT6" class="signup-button" target="_blank" rel="noopener noreferrer">Sign Up</a>
+  </nav>
+  
+  <!-- Masthead -->
+  <header>
+    <h1>Burnout shouldn’t be the cost of ambition.</h1>
+    <p>See where your time and energy are going and make time and mental space for what matters to you.</p>
+    <a href="https://forms.gle/b6KvJgP85BKoRMAT6" class="signup-button" target="_blank" rel="noopener noreferrer">Sign Up</a>
+  </header>
 
-        <!-- Team Member Cards -->
-        <div class="team-grid">
-            <div class="team-member">
-                <p class="name">Rhea</p>
-                <a href="https://www.linkedin.com/in/rheashuklaa/" target="_blank" class="linkedin">LinkedIn →</a>
-            </div>
-            <div class="team-member">
-                <p class="name">Joo</p>
-                <a href="https://www.linkedin.com/in/joo-h-kim/" target="_blank" class="linkedin">LinkedIn →</a>
-            </div>
-            <div class="team-member">
-                <p class="name">Harshini</p>
-                <a href="https://www.linkedin.com/in/harshini-sai-donepudi-361764b8/" target="_blank" class="linkedin">LinkedIn →</a>
-            </div>
-            <div class="team-member">
-                <p class="name">Sidharth</p>
-                <a href="https://www.linkedin.com/in/sidharth-vasudev-5267071b3/" target="_blank" class="linkedin">LinkedIn →</a>
-            </div>
-        </div>
+  <!-- Foreground Image -->
+  <img src="foreground.png" alt="Foreground Visual" class="foreground-image" />
 
-        <!-- CTA Button -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTINd9YM1v7rFiWcI5gbJWn5Z4T918yiwGV5bgTyvdeqjoJQ/viewform?usp=sf_link" target="_blank" class="hero-btn">Get Early Access</a>
-    </section>
-
-    <!-- Link to JavaScript -->
-    <script src="script.js"></script>
-    <footer class="footer">
-        <h2>True Support Goes <span class="highlight">Beyond Productivity.</span></h2>
-        <p>© 2025 Juggle. All Rights Reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    © 2025 Juggl. All Rights Reserved.
+  </footer>
 </body>
 </html>
